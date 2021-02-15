@@ -33,19 +33,20 @@ public class JobTest {
     }
 
     @Test
-    public void testToString(){
+    public void testToStringWithLabel(){
+        Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-        Job job = new Job();
+        String jobString = ("\nID: " + job.getId() + " \n" +
+                "Name: " + job.getName() + " \n" +
+                "Employer: " + job.getEmployer() + " \n" +
+                "Location: " + job.getLocation() + " \n" +
+                "Position Type: " + job.getPositionType() + " \n" +
+                "Core Competency: " + job.getCoreCompetency() + " \n");
+
         String output = job.toString();
-        Assert.assertEquals(("\nID: "+job.getId()+" \n"+
-                "Name: "+job.getName()+" \n" +
-                "Employer: "+job.getEmployer()+" \n" +
-                "Location: "+job.getLocation()+" \n" +
-                "Position Type: "+job.getPositionType()+" \n" +
-                "Core Competency: "+job.getCoreCompetency()+" \n"), output);
+
+        Assert.assertEquals(jobString, output);
 
     }
-
-
 
 }

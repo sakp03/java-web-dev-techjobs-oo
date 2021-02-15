@@ -47,8 +47,9 @@ public abstract class JobField {
         return value;
     }
 
-    public void setValue(String value) {
+    public Object setValue(String value) {
         this.value = value;
+        return value;
     }
 
 }

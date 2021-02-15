@@ -13,6 +13,7 @@ public class Job {
     private PositionType positionType;
     private CoreCompetency coreCompetency;
 
+
     /*  TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
          other five fields. The second constructor should also call the first in order to initialize
          the 'id' field.  */
@@ -66,12 +67,12 @@ public class Job {
         if (positionType.getValue().equals("") || positionType.getValue() == null){
             positionType.setValue("Data not available");
         }
-        output = String.format("\nID: %d \n" +
-                "Name: %s \n" +
-                "Employer: %s \n" +
-                "Location: %s \n" +
-                "Position Type: %s \n" +
-                "Core Competency: %s \n", id, name, employer, location, positionType, coreCompetency);
+        output = String.format("\nID: %d\n" +
+                "Name: %s\n" +
+                "Employer: %s\n" +
+                "Location: %s\n" +
+                "Position Type: %s\n" +
+                "Core Competency: %s\n", id, name, employer, location, positionType, coreCompetency);
         return output;
     }
 
@@ -121,5 +122,6 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
 
 }

@@ -34,14 +34,14 @@ public class JobTest {
 
     @Test
     public void testToStringWithLabel(){
-        Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job job = new Job("Product tester", new Employer(""), new Location(""), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-        String jobString = ("\nID: " + job.getId() + " \n" +
-                "Name: " + job.getName() + " \n" +
-                "Employer: " + job.getEmployer() + " \n" +
-                "Location: " + job.getLocation() + " \n" +
-                "Position Type: " + job.getPositionType() + " \n" +
-                "Core Competency: " + job.getCoreCompetency() + " \n");
+        String jobString = String.format("\nID: %d\n" +
+                "Name: %s\n" +
+                "Employer: %s\n" +
+                "Location: %s\n" +
+                "Position Type: %s\n" +
+                "Core Competency: %s\n", job.getId(), job.getName(), job.getEmployer().setValue("Data not available"), job.getLocation().setValue("Data not available"), job.getPositionType(), job.getCoreCompetency());
 
         String output = job.toString();
 

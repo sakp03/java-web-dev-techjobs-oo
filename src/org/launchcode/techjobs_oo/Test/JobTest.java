@@ -35,14 +35,17 @@ public class JobTest {
     @Test
     public void testToString(){
 
-        String toString = Job.toString();
-        Assert.assertTrue(toString.contains("_" + job.id + "_"
-                + job.name + "_"
-                + job.employer + "_"
-                + job.location + "_"
-                + job.positionType + "_"
-                + job.coreCompetency + "_"));
+        Job job = new Job();
+        String output = job.toString();
+        Assert.assertEquals(("\nID: "+job.getId()+" \n"+
+                "Name: "+job.getName()+" \n" +
+                "Employer: "+job.getEmployer()+" \n" +
+                "Location: "+job.getLocation()+" \n" +
+                "Position Type: "+job.getPositionType()+" \n" +
+                "Core Competency: "+job.getCoreCompetency()+" \n"), output);
 
     }
+
+
 
 }

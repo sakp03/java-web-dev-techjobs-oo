@@ -33,15 +33,15 @@ public class JobTest {
     }
 
     @Test
-    public void testToStringMethod (){
+    public void testToString(){
 
-        Job job = new Job();
-        Assert.assertTrue("_" + job.id + "_"
+        String toString = Job.toString();
+        Assert.assertTrue(toString.contains("_" + job.id + "_"
                 + job.name + "_"
                 + job.employer + "_"
                 + job.location + "_"
                 + job.positionType + "_"
-                + job.coreCompetency + "_");
+                + job.coreCompetency + "_"));
 
     }
 
